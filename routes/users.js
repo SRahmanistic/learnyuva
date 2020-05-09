@@ -204,7 +204,7 @@ router.post('/reset/:token', function(req, res) {
             });
           })
         } else {
-            req.flash("error", "Passwords do not match.");
+            req.flash("error_msg", "Passwords do not match.");
             return res.redirect('/users/reset/:token');
         }
       });
