@@ -1,0 +1,184 @@
+body{
+  /*margin: 0;*/
+  text-align: center;
+  margin: auto;
+}
+h1,h2,h3,h4,h5,h6{
+  margin-top: 0;
+  color: #07689F;
+  font-family: 'Montserrat',sans-serif;
+}
+h4{
+   line-height: 2;
+}
+p{
+  font-family: 'Merriweather'serif;
+  line-height: 2;
+  color:#888888;
+}
+/*cards*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px 10px 10px 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  transition: all .5s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 576px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 0px;
+  }
+}
+/*
+.team{
+  display: flex;
+  justify-content: center;
+}*/
+.team .row{
+  margin-top: 5% !important;
+}
+.list-unstyled li{
+  padding: 0% !important;
+  margin: 0% !important;
+}
+.team .row .list-unstyled li p{
+  font-size: 15px;
+  padding: 0% !important;
+}
+.member{
+  margin-bottom: 5% !important;
+}
+.courses{
+  text-decoration: none !important;
+  color: #33313B !important;
+}
+.jumbotron{
+  color: #07689F;
+  background-color: #fff !important;
+  height: 7% !important;
+}
+.jumbotron h1{
+  margin-top: 0% !important;
+}
+.heading{
+  color: #07689F;
+  margin: 0px;
+}
+.item{
+  border-color: #07689F !important;
+  border-width: 2px;
+}
+ .navbar{
+    background-color: #3F72AF;
+    color: #fff !important;
+    position: relative;
+    padding-top: 30px;
+    border-radius:  0 0 85% 85% / 30%;
+  }
+.dark-mode, .dark-mode *{
+  background-color: #33313B;
+  color: #f7f7f7;
+  border-color: #f7f7f7;
+}
+
+.middle-container{
+color: #07689F;
+margin-bottom: 2px;
+padding: 5px;
+}
+
+.bottom-container{
+  background-color: #DBE2EF;
+  color: #fff;
+  width: 100%;
+  height: 130px;
+  left:0;
+  right:0;
+  margin: 0;
+  border-radius: 85% 85% 0 0 / 30%;
+}
+.course-icon{
+  width: 100%;
+}
+@media screen and (max-width: 576px) {
+  .course-icon {
+    width: 60%;
+  }
+  .row{
+    text-align: center;
+    margin-top: 2% !important;
+  }
+  .course-text{
+    text-align: center !important;
+    }
+    .social{
+      text-align: center !important;
+    }
+}
+.divider{
+  border-style: none;
+  border-top-style: dotted;
+  width: 5%;
+  border-width: 5px;
+  border-color: #07689F;
+  opacity: .25;
+}
+.dropdown .menu{
+  border: solid 1px #07689F !important;
+  border-radius: 5px !important;
+} 
+.menu .item{
+  border: solid 1px #07689F;
+  border-top-style: none !important;
+}
+.menu .item:nth-child(1){
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.menu .item :last-of-type{
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.social{
+  padding: 20px;
+}
+.contact{
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+}

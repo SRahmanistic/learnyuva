@@ -1,0 +1,82 @@
+<% include ./partials/navbar  %>
+
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center mb-3">
+        <i class="fas fa-user-plus"></i> Signup to LearnYuva
+      </h1>
+      <% include ./partials/messages %>
+      <form action="/users/register" method="POST">
+        <div class="form-group text-left">
+          <label for="name" class="text-left">Name</label>
+          <input
+            type="name"
+            id="name"
+            name="name"
+            class="form-control"
+            placeholder="Enter Name"
+            value="<%= typeof name != 'undefined' ? name : '' %>"
+          />
+        </div>
+        <div class="form-group text-left">
+          <label for="email" class="text-left">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            placeholder="Enter Email"
+            value="<%= typeof email != 'undefined' ? email : '' %>"
+          />
+        </div>
+        <div class = "form-group text-left">
+            <label for="mobile">Mobile</label>
+            <input type="text" name="mobile" id="mobile" class="form-control" placeholder="Enter your Mobile Number" pattern="[6-9]{1}[0-9]{9}" 
+                title="Phone number starting with 6-9 and remaing 9 digit with 0-9"
+                value="<%= typeof mobile != 'undefined' ? mobile : '' %>"
+            />
+        </div>
+        <div class="form-group text-left">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            placeholder="Create Password"
+            value="<%= typeof password != 'undefined' ? password : '' %>"
+          />
+        </div>
+        <div class="form-group text-left">
+          <label for="password2">Confirm Password</label>
+          <input
+            type="password"
+            id="password2"
+            name="password2"
+            class="form-control"
+            placeholder="Confirm Password"
+            value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+          />
+        </div>
+        <div class="form-group text-left">
+            <div class="custom-control custom-radio custom-control-inline">
+                Please select in the list
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <select id="teachstu" name="teachstu">
+                <option value="Teacher">Teacher</option>
+                <option value="Student">Student</option>
+              </select>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          Register
+        </button>
+      </form>
+      <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
+      <p><a href="/">Home</a></p>
+      
+    </div>
+  </div>
+</div>
