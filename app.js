@@ -1,6 +1,6 @@
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
-const mongoose = require('mongoose');
+var MongoClient = require('mongodb').MongoClient;
 const passport = require('passport');
 const flash = require('connect-flash');
 const session = require('express-session');
@@ -16,7 +16,7 @@ require('./config/passport')(passport);
 const db = require('./config/keys').mongoURI;
 
 // Connect to MongoDB
-mongoose.connect(
+MongoClient.connect(
     db,
     { useNewUrlParser: true }
   )
