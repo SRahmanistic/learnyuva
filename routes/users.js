@@ -21,7 +21,7 @@ function sendingmail(user, done){
       });
       var mailOptions = {
         to: user.email,
-        from: 'davidmeghbaan@gmail.com',
+        from: 'ad.learnyuva@gmail.com',
         subject: 'Your password has been changed',
         text: 'Hello,\n\n' +
           'This is a confirmation that the password for your account ' + user.email + ' has just been changed.\n'
