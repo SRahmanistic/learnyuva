@@ -15,8 +15,8 @@ function sendingmail(user, done){
    var smtpTransport = nodemailer.createTransport({
         service: 'Gmail', 
         auth: {
-          user: 'davidmeghbaan@gmail.com',
-          pass: '@saqibalto258'
+          user: 'ad.learnyuva@gmail.com',
+          pass: '9330@#2581ly'
         }
       });
       var mailOptions = {
@@ -166,14 +166,14 @@ router.post('/forgot', function(req, res, next) {
       var smtpTransport = nodemailer.createTransport({
         service: 'gmail', 
         auth: {
-          user: 'davidmeghbaan@gmail.com',
-          pass: '@saqibalto258'
+          user: 'ad.learnyuva@gmail.com',
+          pass: '9330@#2581ly'
         }
       });
       var mailOptions = {
         to: user.email,
-        from: 'davidmeghbaan@gmail.com',
-        subject: 'Node.js Password Reset',
+        from: 'ad.learnyuva@gmail.com',
+        subject: 'LearnYuva Password Reset',
         text: 'You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n' +
           'Please click on the following link, or paste this into your browser to complete the process:\n\n' +
           'http://' + req.headers.host + '/users/reset/' + token + '\n\n' +
@@ -243,19 +243,19 @@ router.post('/reset/:token', function(req, res) {
       var smtpTransport = nodemailer.createTransport({
         service: 'Gmail', 
         auth: {
-          user: 'davidmeghbaan@gmail.com',
-          pass: '@saqibalto258'
+          user: 'ad.learnyuva@gmail.com',
+          pass: '9330@#2581ly'
         }
       });
       var mailOptions = {
         to: user.email,
-        from: 'davidmeghbaan@gmail.com',
+        from: 'ad.learnyuva@gmail.com',
         subject: 'Your password has been changed',
         text: 'Hello,\n\n' +
           'This is a confirmation that the password for your account ' + user.email + ' has just been changed.\n'
       };
       smtpTransport.sendMail(mailOptions, function(err) {
-        req.flash('success', 'Success! Your password has been changed.');
+        req.flash('success_msg', 'Success! Your password has been changed.');
         done(err);
       });
     }
