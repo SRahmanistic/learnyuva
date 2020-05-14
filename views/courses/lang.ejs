@@ -1,0 +1,52 @@
+ <% if(user){ %>
+   <% include ../partials/navbaraftlogin  %>
+ <% } else{ %>  
+   <% include ../partials/navbar  %>
+<% } %>
+  <div class="container courses-page">
+      <h2 class="text-center">The Language Courses from LearnYuva are</h2>
+      <div class="row">
+          <div class="col-md-6 col-lg-4 col-12">
+            <div class="card">
+                <img class="card-img-top" src="../Assets/Images/spanishLogo.jpg" height="210px" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        LearnYuva's Spanish Course.
+                    </h4>
+                    <p class="card-text">
+                        Get the hang of using one of the world’s most phonetic language.
+                    </p>
+                    <a href="/spanish" class="btn btn-primary">View Course</a>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-12">
+            <div class="card">
+                <img class="card-img-top" src="../Assets/Images/frenchlogo.png" height="210px" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        LearnYuva's French Course.
+                    </h4>
+                    <p class="card-text">
+                        Learn the language of love and amazing culture & traditions.
+                    </p>
+                    <a href="/french" class="btn btn-primary">View Course</a>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-12">
+            <div class="card">
+                <img class="card-img-top" src="../Assets/Images/germanLogo.jpg" height="210px" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        LearnYuva's German Course.
+                    </h4>
+                    <p class="card-text">
+                        Have you ever wanted to have a German tutor at close proximity?
+                    </p>
+                    <a href="/german" class="btn btn-primary">View Course</a>
+                </div>
+            </div>
+          </div>
+      </div>
+  </div>

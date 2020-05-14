@@ -14,35 +14,17 @@ router.get('/dashboard', ensureAuthenticated, (req, res) =>
   })
 );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // routes for courses, aboutus and contact us
+router.get('/lang', forwardAuthenticated, (req, res) => res.render('courses/lang', {
+    user: req.user
+  }) );
+  router.get('/tech', forwardAuthenticated, (req, res) => res.render('courses/tech', {
+    user: req.user
+  }) );
+  router.get('/elec', forwardAuthenticated, (req, res) => res.render('courses/elec', {
+    user: req.user
+  }) );
+
 router.get('/app', forwardAuthenticated, (req, res) => res.render('courses/app', {
     user: req.user
   }) );

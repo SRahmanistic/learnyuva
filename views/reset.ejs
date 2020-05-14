@@ -3,6 +3,7 @@
 	<div class="col-md-12">
 		<form action="/users/reset/<%= token %>" method="POST">
 		  <legend>Reset Password</legend>
+		  <% include ./partials/messages %>
 		  <div class="form-group">
 		    <label for="password">New Password</label>
 		    <input type="password" name="password" value="" placeholder="New password" autofocus="autofocus" class="form-control"/>
@@ -15,5 +16,9 @@
 		    <button type="submit" class="btn btn-primary">Update Password</button>
 		  </div>
 		</form>
+		<br>
+		<br>
+		<br>
+		<br>
 	</div>
 </div>

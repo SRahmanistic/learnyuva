@@ -10,16 +10,26 @@
                 <div class="col-sm-6 col-12 my-auto">
                     <h2>Step into the field of IoT.</h2>
                     <h6><p>Don’t miss out on the opportunity to build a secure, intelligent platform on the internet. Dive into the amazing world of IOT through our live sessions and understand how beautifully Internet Of Things brings everything together.</p></h6>
+                  <br>
+                  <% if(user){ %>
+                    <button type="button" class="btn btn-primary btn-lg" disabled title ="This course is not available right now" >Enroll Now</button>
+                    <% } %>
                 </div>
                 <div class="col-sm-6 col-12">
+                  <br>
                     <img class="course-icon" src="../Assets/Images/iotLogo.jpg">
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="text-center">
+      <h2>We are Launching Soon!</h2>
+      <h6>Your favourite course is under construction it will go live soon </h6>
+    </div>
+    
     <hr class="my-4 divider">
-    <div class="container">
+    <div class="container" style="opacity: 0.1;">
         <div class="row">
             <div class="col-md-3 d-none d-md-block course-stats">
                 <h5>Course Progress Visuals Here</h5>

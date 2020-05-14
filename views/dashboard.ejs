@@ -1,10 +1,136 @@
-
 <% if(user){ %>
    <% include ./partials/navbaraftlogin  %>
  <% } else{ %>  
    <% include ./partials/navbar  %>
 <% } %>
 
-<h1 class="mt-4">Dashboard</h1>
-<p class="lead mb-3">Welcome <%= user.teachstu %>  <%= user.name %></p>
-<a href="/users/logout" class="btn btn-secondary">Logout</a>
+<h1 class="mt-4" align="center">Dashboard</h1>
+<p class="lead mb-3" align="center">Welcome <%= user.teachstu %>  <%= user.name %></p>
+<div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 offset-sm-1 col-12">
+          <h2>LearnYuva</h2>
+          <h5>Igniting Young Minds</h5>
+        </div>
+        <div class="col-sm-7 col-12">
+          <p>
+            Been looking for live and quality courses that can make you smart enough to confidently present yourself before the contemporary world? You are at the right destination. Keep your eyes peeled and make the most out of this opportunity that has
+            knocked your door!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Jumbotron End-->
+
+  <div class="container">
+    <div class="heading">
+      <h1 class="text-center">Our Specialities</h1>
+      <hr class="my-4">
+    </div>
+
+
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <img src="Assets/Images/instructor.png" class="course-icon mx-auto" alt="live sessions">
+          <br>
+          <p>10 hours of live and doubt solving sessions.</p>
+        </div>
+      </div>
+      <hr class="divider d-block d-sm-none">
+      <div class="column">
+        <div class="card">
+          <img src="Assets/Images/desktop-computer.png" class="course-icon mx-auto" alt="pro. mentor">
+          <br>
+          <p>Get mentored by top experts of their fields.</p>
+        </div>
+      </div>
+      <hr class="divider d-block d-sm-none">
+      <div class="column">
+        <div class="card justify-content-center">
+          <img src="Assets/Images/graduate.png" alt="full development" class="course-icon mx-auto" >
+          <br>
+          <p>Courses tailored for your all-round development.</p>
+        </div>
+      </div>
+      <hr class="divider d-block d-sm-none">
+      <div class="column">
+        <div class="card">
+          <img src="Assets/Images/presentation.png" alt="suitable guidance" class="course-icon mx-auto">
+          <br>
+          <p>Personalized guidance suited to your needs.</p>
+        </div>
+      </div>
+      <hr class="divider d-block d-sm-none">
+    </div>
+    <hr class="divider d-none d-lg-block">
+  </div>
+   <br>
+  <div class="container">
+    <div class="heading">
+      <h1 class="text-center">Our Courses</h1>
+      <hr class="my-4">
+    </div>
+
+    <div class="middle-container">
+      <div class="row justify-content-center">
+        <div class="col-sm-4 col-12 order-sm-first my-auto ">
+          <img class="course-icon" src="Assets/Images/langIcon.svg" alt="languages-img">
+        </div>
+        <div class="col-sm-8 col-12 order-sm-first my-auto">
+          <h3>Languages</h3>
+          <p class="text-left">
+            Eliminate the concern of communication barrier in any foreign country by learning to speak various languages with ease.
+          </p>
+            <br>
+          <a href="/lang"><button type="button" class="btn btn-outline-primary">View Courses</button></a>
+        </div>
+      </div>
+
+      <hr class="divider">
+      <div class="row">
+        <div class="col-sm-4 col-12 order-sm-last my-auto">
+          <img class="course-icon" src="Assets/Images/devIcon.svg" alt="development-img">
+        </div>
+        <div class="col-sm-8 col-12 order-sm-first my-auto course-text">
+          <h3>Technical</h3>
+          <p class="text-left">
+              Take a step towards advancement by acquiring the skills of Web Development, App Development and iOS Development and learn the languages of computers to be industry ready.
+          </p>
+            <br>
+          <a href="/tech"><button type="button" class="btn btn-outline-primary">View Courses</button></a>
+        </div>
+      </div>
+      <hr class="divider">
+      <div class="row">
+        <div class="col-sm-4 col-12 order-sm-first my-auto">
+          <img class="course-icon" src="Assets/Images/iotIcon.svg" alt="electronics-img">
+        </div>
+        <div class="col-sm-8 col-12 order-sm-first my-auto" style="padding: 15px;">
+          <h3>IOT with Robotics</h3>
+          <p class="text-left">
+             Familiarize yourself with concept of Internet of Things, Robotics, Drone Making etc. which will help you embark on your journey towards triumph.
+          </p>
+            <br>
+          <a href="/elec"><button type="button" class="btn btn-outline-primary">View Courses</button></a>
+        </div>
+      </div>
+      <hr class="divider">
+      <div class="row">
+        <div class="col-sm-4 col-12 order-sm-last my-auto">
+          <img class="course-icon" src="Assets/Images/marketingIcon.png" alt="development-img">
+        </div>
+        <div class="col-sm-8 col-12 order-sm-first my-auto course-text"  style="padding-left: 15px;">
+          <h3>Marketing</h3>
+          <p class="text-left">
+         Understanding the marketing strategies and a spectrum of tactics that fall under umbrella of Digital Marketing.
+          </p>
+            <br>
+          <a href="/dm"><button type="button" class="btn btn-outline-primary">View Courses</button></a>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div

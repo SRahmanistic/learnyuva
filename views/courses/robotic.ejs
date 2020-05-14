@@ -11,16 +11,26 @@
                     <h2>Step into the field of IoT.</h2>
                     <h6><p>Are you flabbergasted by a humanoid and want to build one but worried about where to start with? Fret no further as LearnYuva is one click apart from guiding you through engrossing lectures with interactive live sessions.
                     </p></h6>
+                  <br>
+                  <% if(user){ %>
+                    <button type="button" class="btn btn-primary btn-lg" disabled title ="This course is not available right now" >Enroll Now</button>
+                    <% } %>
                 </div>
                 <div class="col-sm-6 col-12">
                     <img class="course-icon" src="../Assets/Images/roboticsLogo.jpg">
+                  <br>
                 </div>
             </div>
         </div>
     </div>
-
+ 
+    <div class="text-center">
+      <h2>We are Launching Soon!</h2>
+      <h6>Your favourite course is under construction it will go live soon </h6>
+    </div>
+    
     <hr class="my-4 divider">
-    <div class="container">
+    <div class="container" style="opacity: 0.1;">
         <div class="row">
             <div class="col-md-3 d-none d-md-block course-stats">
                 <h5>Course Progress Visuals Here</h5>
