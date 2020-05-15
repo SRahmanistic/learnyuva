@@ -10,7 +10,28 @@ var crypto = require("crypto");
 // Load User model
 const User = require('../models/User');
 const { forwardAuthenticated } = require('../config/auth');
-
+function sendingdetails(user){
+   var smtpTransport = nodemailer.createTransport({
+        service: 'Gmail', 
+        auth: {
+          user: 'ad.learnyuva@gmail.com',
+          pass: '9330@#2581ly'
+        }
+      });
+      var mailOptions = {
+        to: 'ad.learnyuva@gmail.com',
+        from: 'ad.learnyuva@gmail.com',
+        subject: 'New User has registered',
+        text: 'Hello,\n\n' +
+          'Name:' + user.name + '\n' +
+          'Email id:' + user.email + '\n'+
+          'Mobile Number:' + user.mobile + '\n' +
+          'Registered as:' + user.teachstu + '\n'
+      };
+      smtpTransport.sendMail(mailOptions, function(err) {
+        req.flash('success', 'Success!');
+      });
+}
 function sendingmail(user, done){
    var smtpTransport = nodemailer.createTransport({
         service: 'Gmail', 
@@ -93,7 +114,7 @@ router.post('/register', (req, res) => {
           mobile,
           teachstu
         });
-        
+        sendingdetails(newUser);
         // console.log(req.body);
         bcrypt.genSalt(10, (err, salt) => {
           bcrypt.hash(newUser.password, salt, (err, hash) => {
