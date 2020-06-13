@@ -4,7 +4,7 @@
    <% include ../partials/navbar  %>
 <% } %>
 <div class="container">
-    <div class="jumbotron">
+      <div class="jumbotron">
         <div class="course-intro">
             <div class="row">
                 <div class="col-sm-6 col-12 my-auto">
@@ -13,32 +13,75 @@
                     </p></h6>
                   <br>
                   <% if(user){ %>
-                    <button type="button" class="btn btn-primary btn-lg" disabled title ="This course is not available right now" >Enroll Now</button>
+                    <a href="https://rzp.io/l/cTj2on0" target="_blank">
+                      <button type="button" class="btn btn-primary btn-lg">Enroll Now</button>
+                    </a>
+                    <br>
+                    <p>₹1049</p>
+                    <% } else { %>
+                      <a href="/users/login">
+                        <button type="button" class="btn btn-primary btn-lg">Enroll Now</button>
+                      </a>
                     <% } %>
                 </div>
                 <div class="col-sm-6 col-12">
                   <br>
                     <img class="course-icon" src="../Assets/Images/webLogo.png">
                 </div>
-            </div>
+          </div>
         </div>
-    </div>
-
-    <div class="text-center">
-      <h2>We are Launching Soon!</h2>
-      <h6>Your favourite course is under construction it will go live soon </h6>
-    </div>
+      </div>
     
     <hr class="my-4 divider">
-    <div class="container" style="opacity: 0.1;">
+    <div class="container">
         <div class="row">
             <div class="col-md-3 d-none d-md-block course-stats">
-                <h5>Course Progress Visuals Here</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam temporibus iste voluptatem quia voluptates? Ipsum culpa sit soluta neque sint facilis aperiam voluptates, ex quam voluptatum, quo mollitia error non.</p>
+                <h5>Course Features</h5>
+                <br>
+                <p>Skill Level: Beginner</p>
+                <hr>
+                <p>Access on Mobile and PC</p>
+                <hr>
+                <p>Language: English</p>
+                <hr>
+                <p>Certificate of Completion</p>
+                <hr>
+                <p>Doubt Sessions</p>
+                <hr>
+                <p>Live and Interactive classes</p>
+                <hr>
+                <p>Experienced Faculties</p>
+                <hr>
+                <p>Duration: 4 Weeks</p>
             </div>
             <div class="col-md-9 col-12 course-content">
-                <h5>Course Content Here</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam corrupti, nesciunt voluptate ullam voluptatem repellat quod vitae saepe? Sunt ut facere optio nesciunt suscipit expedita labore! Eum autem natus exercitationem.</p>
+                <h5>Course Curriculum</h5>
+                <div class="text-left">
+                  <h6>Week 1</h6>
+                  <ul>
+                    <p>What is Web Development?</p>
+                    <p>Fundamentals of HTML</p>
+                    <p>Advanced HTML & HTML5</p>
+                  </ul>
+                  <h6>Week 2</h6>
+                  <ul>
+                    <p>Styling our webpages</p>
+                    <p>Internal and External styling</p>
+                    <p>Creating a simple website design</p>
+                  </ul>
+                  <h6>Week 3</h6>
+                  <ul>
+                    <p>Introduction to JavaScript</p>
+                    <p>Fundamentals of JavaScript</p>
+                    <p>Using JavaScript in Webpages</p>
+                  </ul>
+                  <h6>Week 4</h6>
+                  <ul>
+                    <p>Advanced JavaScript</p>
+                    <p>Making websites interactive with JavaScript</p>
+                    <p>Conclusion and Glance into the next course</p>
+                  </ul>
+                </div>
             </div>
         </div>
     </div>
