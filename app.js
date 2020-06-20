@@ -7,6 +7,7 @@ const session = require('express-session');
 const volleyball = require('volleyball');
 const ejsLint = require('ejs-lint');
 
+require('dotenv').config();
 const app = express();
 app.use(volleyball);
 // Passport Config
