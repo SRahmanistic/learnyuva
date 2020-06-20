@@ -15,7 +15,7 @@ function sendingdetails(user){
         service: 'Gmail', 
         auth: {
           user: 'ad.learnyuva@gmail.com',
-          pass: '9330@#2581ly'
+          pass: process.env.EMAIL_PASSWORD
         }
       });
       var mailOptions = {
@@ -37,7 +37,7 @@ function sendingmail(user, done){
         service: 'Gmail', 
         auth: {
           user: 'ad.learnyuva@gmail.com',
-          pass: '9330@#2581ly'
+          pass: process.env.EMAIL_PASSWORD
         }
       });
       var mailOptions = {
@@ -188,7 +188,7 @@ router.post('/forgot', function(req, res, next) {
         service: 'gmail', 
         auth: {
           user: 'ad.learnyuva@gmail.com',
-          pass: '9330@#2581ly'
+          pass: process.env.EMAIL_PASSWORD
         }
       });
       var mailOptions = {
@@ -202,7 +202,7 @@ router.post('/forgot', function(req, res, next) {
       };
       smtpTransport.sendMail(mailOptions, function(err) {
         console.log('mail sent');
-        req.flash('success', 'An e-mail has been sent to ' + user.email + ' with further instructions.');
+        req.flash('success_msg', 'An e-mail has been sent to ' + user.email + ' with further instructions.');
         done(err, 'done');
       });
     }
@@ -265,7 +265,7 @@ router.post('/reset/:token', function(req, res) {
         service: 'Gmail', 
         auth: {
           user: 'ad.learnyuva@gmail.com',
-          pass: '9330@#2581ly'
+          pass: process.env.EMAIL_PASSWORD
         }
       });
       var mailOptions = {
