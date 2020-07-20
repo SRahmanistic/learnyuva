@@ -4,42 +4,130 @@
    <% include ../partials/navbar  %>
 <% } %>
 <div class="container">
-    <div class="jumbotron">
-        <div class="course-intro">
-            <div class="row">
-                <div class="col-sm-6 col-12 my-auto">
-                    <h2>Enhance your skills in Digital Marketing.</h2>
-                    <h6><p>With the right use of internet, you will now be able to expand your horizon and gain new exposure for your business. Learn tactics to help widen your customer base with ease and come out ahead in this competitive world.
-                    </p></h6>
-                  <br>
-                  <% if(user){ %>
-                    <button type="button" class="btn btn-primary btn-lg" disabled title ="This course is not available right now" >Enroll Now</button>
-                    <% } %>
-                </div>
-                <div class="col-sm-6 col-12">
-                  <br>
-                    <img class="course-icon" src="../Assets/Images/dmLogo.jpg">
-                </div>
-            </div>
+  <div class="jumbotron">
+    <div class="course-intro">
+      <div class="row">
+        <div class="col-sm-6 col-12 my-auto">
+          <h2>Enhance your Skills in Digital Marketing.</h2>
+          <h6>
+            <p>With the right use of internet, you will now be able to expand your horizon and gain new exposure for
+              your business. Learn tactics to help widen your customer base with ease and come out ahead in this
+              competitive world.
+            </p>
+          </h6>
+          <br>
+          <div class="validate my-auto">
+            <input type="text" id="couponCode" class="form-group text-center" placeholder="Enter Discount Coupon"> 
+            <button class="btn btn-outline-dark btn-sm" onclick="ValidateCodeDM()">Validate Code</button>
+          </div><br>
+          <div class="mt-2" id="alert"></div>
+          <a id="payLinkDM">
+            <button type="button" class="mt-2 btn btn-primary btn-lg" id="enrolBtn">Enroll Now @ Rs. 1500</button> <s>2800</s>
+          </a>
         </div>
-    </div>
-   
-    <div class="text-center">
-      <h2>We are Launching Soon!</h2>
-      <h6>Your favourite course is under construction it will go live soon </h6>
-    </div>
-    
-    <hr class="my-4 divider">
-    <div class="container" style="opacity: 0.1;">
-        <div class="row">
-            <div class="col-md-3 d-none d-md-block course-stats">
-                <h5>Course Progress Visuals Here</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam temporibus iste voluptatem quia voluptates? Ipsum culpa sit soluta neque sint facilis aperiam voluptates, ex quam voluptatum, quo mollitia error non.</p>
-            </div>
-            <div class="col-md-9 col-12 course-content">
-                <h5>Course Content Here</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam corrupti, nesciunt voluptate ullam voluptatem repellat quod vitae saepe? Sunt ut facere optio nesciunt suscipit expedita labore! Eum autem natus exercitationem.</p>
-            </div>
+        <div class="col-sm-6 col-12">
+          <br>
+          <img class="course-icon" src="../Assets/Images/dmLogo.jpg">
         </div>
+      </div>
     </div>
   </div>
+
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-md-3 col-12 course-stats">
+        <h3>Course Features</h3>
+        <br>
+        <p>Skill Level: Beginner</p>
+        <hr>
+        <p>Access on Mobile and PC</p>
+        <hr>
+        <p>Language: English</p>
+        <hr>
+        <p>Certificate of Completion</p>
+        <hr>
+        <p>Doubt Sessions</p>
+        <hr>
+        <p>Live and Interactive classes</p>
+        <hr>
+        <p>Experienced Faculties</p>
+        <hr>
+        <p>Duration: 4 Weeks</p>
+      </div>
+      <div class="col-md-9 col-12 course-content">
+        <h3 class="text-center">Course Curriculum</h3>
+        <div class="text-left">
+          <div class="row">
+            <div class="col-md-6">
+              <h6 class="text-center">Week 1</h6>
+              <ul class="text-left">
+                <p>Dive into the world of Digital Marketing</p>
+                <p>Acquire a better understanding of marketing through
+                  online ads and run your own Facebook and Instagram ad
+                  campaigns.
+                  </p>
+              </ul>
+            </div>
+            <div class="col-md-6 center">
+              <h6 class="text-center">Week 2</h6>
+              <ul class="text-left" >
+                <p>Understand analytics and utilize data for effective
+                  campaigns</p>
+                <p>Run advertising campaigns on google search and
+                  display networks.</p>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h6 class="text-center">Week 3</h6>
+              <ul class="text-left">
+                <p>Understand the cheapest forms of marketing on the
+                  planet and learn how to run e-mail drip campaigns.
+                  </p>
+                <p>Understand blog marketing, content building strategy
+                  while covering the basics of search engine optimization.
+                  </p>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h6 class="text-center">Week 4</h6>
+              <ul class="text-left">
+                <p>How to get your ads on YouTube.
+                </p>
+                <p>How to jumpstart your career in Digital Marketing -
+                  Farewell Discussion</p>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container my-3">
+  <h3 class="text-center">About the Mentor</h3>
+  <div class="row mt-3">
+    <div class="col-md-4 my-auto">
+      <img src="../Assets/Images/siddhant.jpg" width="300px">
+    </div>
+    <div class="col-md-8 my-auto">
+      <p>An entrepreneur and a
+        co-founder of TheWav,
+        Siddhant Keshari is an
+        enthusiastic individual
+        whose expertise has
+        helped him handle
+        digital marketing
+        campaigns on a national
+        level.</p>
+        <p>His organization deals with the 3Ds that are Design,
+          Development and Digital Marketing. Having mentored
+          over thousand students, this inspiring young mind is
+          zealous and impassioned about Marketing and Growth
+          Hacking. This youthful and energetic CEO has pledged
+          himself to the pursuit of knowledge and in helping others
+          walk in the same path.</p>
+    </div>
+  </div>
+</div>

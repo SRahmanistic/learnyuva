@@ -4,85 +4,129 @@
    <% include ../partials/navbar  %>
 <% } %>
 <div class="container">
-      <div class="jumbotron">
-        <div class="course-intro">
-            <div class="row">
-                <div class="col-sm-6 col-12 my-auto">
-                    <h2>Web-Development for Beginners</h2>
-                    <h6><p>Have you ever looked at a website and wondered how it was created? Well, look no further than our course. Learn to design websites both beautiful and complex, sites that are easy to navigate and a joy to peruse. Learn this invaluable skill with our online classes and careful guidance.
-                    </p></h6>
-                  <br>
-                  <% if(user){ %>
-                    <a href="https://rzp.io/l/cTj2on0" target="_blank">
-                      <button type="button" class="btn btn-primary btn-lg">Enroll Now</button>
-                    </a>
-                    <br>
-                    <p>₹1049</p>
-                    <% } else { %>
-                      <a href="/users/login">
-                        <button type="button" class="btn btn-primary btn-lg">Enroll Now</button>
-                      </a>
-                    <% } %>
-                </div>
-                <div class="col-sm-6 col-12">
-                  <br>
-                    <img class="course-icon" src="../Assets/Images/webLogo.png">
-                </div>
+  <div class="jumbotron">
+    <div class="course-intro">
+      <div class="row">
+        <div class="col-sm-6 col-12 my-auto">
+          <h2>Web-Development for Beginners</h2>
+          <h6>
+            <p>Have you ever looked at a website and wondered how it was created? Well, look no further than our
+              course. Learn to design websites both beautiful and complex, sites that are easy to navigate and a joy
+              to peruse. Learn this invaluable Skill with our online classes and careful guidance.
+            </p>
+          </h6>
+          <br>
+          <div class="validate my-auto">
+            <input type="text" id="couponCode" class="form-group text-center" placeholder="Enter Discount Coupon">
+            <button class="btn btn-outline-dark btn-sm" onclick="ValidateCodeWeb()">Validate Code</button>
+          </div><br>
+          <div id="alert" class="mt-3">
+          </div>
+          <a id="payLinkWeb">
+            <button type="button" class="mt-2 btn btn-primary btn-lg" id="enrolBtn">Enroll Now @ Rs. 1049</button><s>1500</s>
+          </a>
+        </div>
+        <div class="col-sm-6 col-12">
+          <br>
+          <img class="course-icon" src="../Assets/Images/webLogo.png">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-md-3 col-12 course-stats">
+        <h3>Course Features</h3>
+        <br>
+        <p>Skill Level: Beginner</p>
+        <hr>
+        <p>Access on Mobile and PC</p>
+        <hr>
+        <p>Language: English</p>
+        <hr>
+        <p>Certificate of Completion</p>
+        <hr>
+        <p>Doubt Sessions</p>
+        <hr>
+        <p>Live and Interactive classes</p>
+        <hr>
+        <p>Experienced Faculties</p>
+        <hr>
+        <p>Duration: 4 Weeks</p>
+      </div>
+      <div class="col-md-9 col-12 course-content">
+        <h3 class="text-center">Course Curriculum</h3>
+        <div class="text-left">
+          <div class="row">
+            <div class="col-md-6">
+              <h6 class="text-center">Week 1</h6>
+              <ul class="text-left">
+                <p>Introduction to Web Development, how the internet
+                  works and a first look at HTML5</p>
+                <p>Adding content with HTML5 and a basic intro to
+                  JavaScript</p>
+              </ul>
+            </div>
+            <div class="col-md-6 center">
+              <h6 class="text-center">Week 2</h6>
+              <ul class="text-left" >
+                <p>Introduction to CSS, Design Trends, Resources you
+                  must know about and a first look at CSS3</p>
+                <p>Styling the content with CSS3 and diving deeper into
+                  JavaScript</p>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h6 class="text-center">Week 3</h6>
+              <ul class="text-left">
+                <p>Backend Basics and a first look at MySQL</p>
+                <p>Creating, Reading, Updating and Deleting data with
+                  MySQL</p>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h6 class="text-center">Week 4</h6>
+              <ul class="text-left">
+                <p>Creating, Reading, Updating and Deleting data with
+                  MySQL</p>
+                <p>Advanced PHP and Deploying a website</p>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    
-    <hr class="my-4 divider">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 d-none d-md-block course-stats">
-                <h5>Course Features</h5>
-                <br>
-                <p>Skill Level: Beginner</p>
-                <hr>
-                <p>Access on Mobile and PC</p>
-                <hr>
-                <p>Language: English</p>
-                <hr>
-                <p>Certificate of Completion</p>
-                <hr>
-                <p>Doubt Sessions</p>
-                <hr>
-                <p>Live and Interactive classes</p>
-                <hr>
-                <p>Experienced Faculties</p>
-                <hr>
-                <p>Duration: 4 Weeks</p>
-            </div>
-            <div class="col-md-9 col-12 course-content">
-                <h5>Course Curriculum</h5>
-                <div class="text-left">
-                  <h6>Week 1</h6>
-                  <ul>
-                    <p>What is Web Development?</p>
-                    <p>Fundamentals of HTML</p>
-                    <p>Advanced HTML & HTML5</p>
-                  </ul>
-                  <h6>Week 2</h6>
-                  <ul>
-                    <p>Styling our webpages</p>
-                    <p>Internal and External styling</p>
-                    <p>Creating a simple website design</p>
-                  </ul>
-                  <h6>Week 3</h6>
-                  <ul>
-                    <p>Introduction to JavaScript</p>
-                    <p>Fundamentals of JavaScript</p>
-                    <p>Using JavaScript in Webpages</p>
-                  </ul>
-                  <h6>Week 4</h6>
-                  <ul>
-                    <p>Advanced JavaScript</p>
-                    <p>Making websites interactive with JavaScript</p>
-                    <p>Conclusion and Glance into the next course</p>
-                  </ul>
-                </div>
-            </div>
-        </div>
     </div>
   </div>
+</div>
+<div class="container my-3">
+  <h3 class="text-center">About the Mentor</h3>
+
+  <div class="row mt-3">
+    <div class="col-md-4 my-auto">
+      <img src="/Assets/Images/aquib.jfif" width="300px">
+    </div>
+    <div class="col-md-8 my-auto">
+      <p>Mr. Aquib Ajani is a co-founder
+        and Chief Vision
+        officer of design and
+        development firm,
+        Tabdeel Studios. He
+        completed his postgraduation
+        in Software
+        Engineering from VIT
+        University, Vellore.</p>
+        <p>
+          He has successfully designed and developed numerous
+apps and websites for various startups and industry
+professionals.
+He has trained over 5000 students in a wide
+variety of Design and Development tools and frameworks
+across multiple platforms including Udemy, MyCaptain
+and ChalkStreet.
+        </p>
+    </div>
+  </div>
+</div>
