@@ -12,7 +12,9 @@ const User = require('../models/User');
 const { forwardAuthenticated } = require('../config/auth');
 function sendingdetails(user){
    var smtpTransport = nodemailer.createTransport({
-        service: 'Gmail', 
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true, 
         auth: {
           user: 'ad.learnyuva@gmail.com',
           pass: process.env.EMAIL_PASSWORD
@@ -34,7 +36,9 @@ function sendingdetails(user){
 }
 function sendingmail(user, done){
    var smtpTransport = nodemailer.createTransport({
-        service: 'Gmail', 
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true, 
         auth: {
           user: 'ad.learnyuva@gmail.com',
           pass: process.env.EMAIL_PASSWORD
@@ -185,7 +189,9 @@ router.post('/forgot', function(req, res, next) {
     },
     function(token, user, done) {
       var smtpTransport = nodemailer.createTransport({
-        service: 'gmail', 
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true, 
         auth: {
           user: 'ad.learnyuva@gmail.com',
           pass: process.env.EMAIL_PASSWORD
@@ -262,7 +268,9 @@ router.post('/reset/:token', function(req, res) {
     },
     function(user, done) {
       var smtpTransport = nodemailer.createTransport({
-        service: 'Gmail', 
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true, 
         auth: {
           user: 'ad.learnyuva@gmail.com',
           pass: process.env.EMAIL_PASSWORD
