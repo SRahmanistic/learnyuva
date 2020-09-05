@@ -16,13 +16,19 @@
             </p>
           </h6>
           <br>
-          <div class="validate my-auto">
+          <!-- <div class="validate my-auto">
             <input type="text" id="couponCode" class="form-group text-center" placeholder="Enter Discount Coupon"> 
             <button class="btn btn-outline-dark btn-sm" onclick="ValidateCodeDM()">Validate Code</button>
-          </div><br>
+          </div><br> -->
           <div class="mt-2" id="alert"></div>
           <a id="payLinkDM">
-            <button type="button" class="mt-2 btn btn-primary btn-lg" id="enrolBtn">Enroll Now @ Rs. 1500</button> <s>2800</s>
+            <div>
+              <% if(user){ %>
+              <button type="button" class="mt-2 btn  btn-lg" id="enrolBtn"><a href="https://pages.razorpay.com/pl_FFuzrCO8rveMhR/view" target="_blank">Enroll Now @ Rs. 2800</a></button>
+              <% } else{ %>
+                <a href="/users/login" class="mt-2 btn  btn-lg">Please Login to proceed!</a>
+                <% } %>
+            </div>
           </a>
         </div>
         <div class="col-sm-6 col-12">
